@@ -44,7 +44,7 @@ async function searchTrials() {
                     ).join("; ")
                     : "No location listed";
 
-            const aiResponse = await fetch("http://localhost:3000/summarize", {
+            const aiResponse = await fetch("/summarize"
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
