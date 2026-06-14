@@ -6,7 +6,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
 app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
@@ -14,9 +13,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/summarize", async (req, res) => {
-    const { eligibilityText, eligibility } = req.body;
+    const { eligibility } = req.body;
 
-    const text = (eligibilityText || eligibility || "").toLowerCase();
+    const text = (eligibility || "").toLowerCase();
 
     let summary = [];
     let score = 100;
@@ -53,7 +52,7 @@ app.post("/summarize", async (req, res) => {
     summary.push("• Confirm eligibility with the trial team or your doctor.");
 
     res.json({
-        score,
+        score: score,
         summary: summary.join("\n")
     });
 });

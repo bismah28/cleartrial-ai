@@ -44,7 +44,7 @@ async function searchTrials() {
                     ).join("; ")
                     : "No location listed";
 
-            const aiResponse = await fetch("/summarize"
+            const aiResponse = await fetch("/summarize", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -68,16 +68,19 @@ async function searchTrials() {
                     <p>${eligibility.slice(0, 700)}...</p>
 
                     <div class="score" style="
-color:
-${aiData.score >= 80 ? 'green' :
-  aiData.score >= 60 ? 'orange' :
-  'red'};
-">
-    Match Score: ${aiData.score}%
-</div>
+                        color: ${
+                            aiData.score >= 80
+                                ? "green"
+                                : aiData.score >= 60
+                                ? "orange"
+                                : "red"
+                        };
+                    ">
+                        Match Score: ${aiData.score}%
+                    </div>
 
-<p><strong>Plain-English Summary:</strong></p>
-<pre>${aiData.summary}</pre>
+                    <p><strong>Plain-English Summary:</strong></p>
+                    <pre>${aiData.summary}</pre>
 
                     <p>
                         <a href="https://clinicaltrials.gov/study/${nctId}" target="_blank">
