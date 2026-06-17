@@ -2,6 +2,10 @@
 
 ![ClearTrial AI Screenshot](Screenshot%202026-06-16%20231358.png)
 
+## Live Demo
+
+https://cleartrial-ai-wsnx.onrender.com
+
 ## Overview
 
 ClearTrial AI is a web application that helps users discover recruiting clinical trials and understand eligibility requirements in plain English.
