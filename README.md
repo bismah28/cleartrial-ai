@@ -1,6 +1,6 @@
 # ClearTrial AI
 
-![ClearTrial AI Screenshot](Screenshot 2026-06-16 231358.png)
+![ClearTrial AI Screenshot](Screenshot%202026-06-16%20231358.png)
 
 ## Overview
 
