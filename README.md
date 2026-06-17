@@ -62,4 +62,4 @@ Bismah Kunda
 
 University of Waterloo
 
-Bachelor of Biotechnology and Business
+Bachelor of Science and Business
